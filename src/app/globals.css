@@ -1,11 +1,13 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ========================================
    DESIGN DNA: VERSATLY TECH LANDING
    Sophisticated, Warm, Modern, Editorial
    ======================================== */
 
-@theme {
+:root {
   /* Primary Colors */
   --color-background: #e6d9cc;
   --color-orange: #ff6333;
@@ -22,7 +24,7 @@
 
   /* Font Families */
   --font-sans: var(--font-rethink-sans), system-ui, sans-serif;
-  --font-editorial: var(--font-pp-editorial), Georgia, serif;
+  --font-editorial: Georgia, serif;
 
   /* Border Radius */
   --radius-sm: 0.5rem;

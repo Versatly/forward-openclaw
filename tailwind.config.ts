@@ -21,7 +21,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-rethink-sans)", "system-ui", "sans-serif"],
-        editorial: ["var(--font-pp-editorial)", "Georgia", "serif"],
+        editorial: ["Georgia", "serif"],
       },
       borderRadius: {
         "4xl": "2rem",
