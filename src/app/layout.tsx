@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
-import { Rethink_Sans } from "next/font/google";
+import { Rethink_Sans, JetBrains_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
   variable: "--font-rethink-sans",
   weight: ["400", "500", "600", "700", "800"],
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
+  display: 'swap',
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -143,7 +158,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${rethinkSans.variable} font-sans antialiased`}>
+      <body className={`${rethinkSans.variable} ${jetbrainsMono.variable} ${playfairDisplay.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

@@ -3,41 +3,41 @@
 @tailwind utilities;
 
 /* ========================================
-   DESIGN DNA: VERSATLY TECH LANDING
-   Sophisticated, Warm, Modern, Editorial
+   DESIGN DNA: VERSATLY TECH LANDING V2
+   Sophisticated, Industrial, Swiss-Inspired
    ======================================== */
 
 :root {
-  /* Primary Colors */
-  --color-background: #e6d9cc;
-  --color-orange: #ff6333;
-  --color-orange-light: #ff9933;
+  /* Primary Colors - Refined for higher contrast */
+  --color-background: #F2F0ED;
+  --color-orange: #FF4D00;
+  --color-orange-light: #FF7A3D;
 
   /* Text Hierarchy */
-  --color-a: #1A1715;
-  --color-aa: #63523a;
-  --color-aaa: #443318;
+  --color-a: #111111;
+  --color-aa: #555555;
+  --color-aaa: #888888;
 
   /* UI Colors */
-  --color-border: #bfbfbf;
-  --color-card: #DDCFC2;
+  --color-border: #D1CDC7;
+  --color-card: #FFFFFF;
 
   /* Font Families */
   --font-sans: var(--font-rethink-sans), system-ui, sans-serif;
-  --font-editorial: Georgia, serif;
+  --font-editorial: var(--font-playfair-display), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 
   /* Border Radius */
-  --radius-sm: 0.5rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.5rem;
-  --radius-xl: 2rem;
-  --radius-2xl: 2.5rem;
-  --radius-4xl: 3rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
 /* Base Styles */
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -45,14 +45,21 @@ body {
   background: var(--color-background);
   font-family: var(--font-sans);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Editorial Headings */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-editorial);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
   letter-spacing: -0.02em;
 }
 
@@ -62,334 +69,97 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+/* Utilities */
+.container-wide {
+  @apply max-w-[1400px] mx-auto px-6 md:px-10;
 }
-
-::-webkit-scrollbar-track {
-  background: var(--color-background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-aa);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-a);
-}
-
-/* ========================================
-   TYPOGRAPHY UTILITIES
-   ======================================== */
-
-.font-editorial {
-  font-family: var(--font-editorial);
-}
-
-.font-editorial-italic {
-  font-family: var(--font-editorial);
-  font-style: italic;
-}
-
-/* ========================================
-   BUTTON STYLES
-   ======================================== */
-
-.btn-primary {
-  @apply relative inline-flex items-center gap-2 px-6 py-3 font-medium text-white rounded-2xl overflow-hidden;
-  background: color-mix(in srgb, var(--color-orange) 80%, transparent);
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--color-aa) 20%, transparent);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.btn-primary:hover {
-  transform: scale(1.035);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--color-orange) 30%, transparent);
-}
-
-.btn-primary:active {
-  transform: scale(0.985);
-}
-
-.btn-secondary {
-  @apply relative inline-flex items-center gap-2 px-6 py-3 font-medium rounded-2xl;
-  color: var(--color-a);
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.btn-secondary:hover {
-  border-color: var(--color-orange);
-  color: var(--color-orange);
-}
-
-/* ========================================
-   FORM INPUTS
-   ======================================== */
-
-.input-field {
-  @apply w-full px-5 py-4 rounded-xl;
-  background: color-mix(in srgb, white 60%, transparent);
-  border: 1px solid var(--color-border);
-  color: var(--color-a);
-  transition: all 0.3s ease;
-}
-
-.input-field::placeholder {
-  color: var(--color-aa);
-  opacity: 0.6;
-}
-
-.input-field:focus {
-  @apply outline-none;
-  border-color: var(--color-orange);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-orange) 15%, transparent);
-}
-
-/* ========================================
-   CARD STYLES
-   ======================================== */
-
-.card {
-  @apply rounded-2xl p-8;
-  background: color-mix(in srgb, white 25%, transparent);
-  border: 1px solid color-mix(in srgb, var(--color-border) 40%, transparent);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px color-mix(in srgb, var(--color-aa) 15%, transparent);
-}
-
-.card-warm {
-  background: var(--color-card);
-}
-
-/* ========================================
-   ANIMATIONS
-   ======================================== */
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes pulse-soft {
-  0%, 100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-slide-in {
-  animation: slideIn 0.5s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.4s ease-out forwards;
-}
-
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-
-.animate-pulse-soft {
-  animation: pulse-soft 3s ease-in-out infinite;
-}
-
-/* Stagger delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-.stagger-6 { animation-delay: 0.6s; }
-
-/* ========================================
-   GRADIENT UTILITIES
-   ======================================== */
-
-.gradient-orange {
-  background: radial-gradient(
-    132.99% at 105.78% 111.56%,
-    var(--color-orange) 0%,
-    var(--color-orange-light) 50%,
-    var(--color-orange) 100%
-  );
-}
-
-.gradient-warm {
-  background: linear-gradient(
-    180deg,
-    var(--color-background) 0%,
-    var(--color-card) 100%
-  );
-}
-
-.gradient-fade-bottom {
-  background: linear-gradient(
-    to top,
-    var(--color-background) 0%,
-    transparent 100%
-  );
-}
-
-/* ========================================
-   LAYOUT UTILITIES
-   ======================================== */
 
 .container-narrow {
-  @apply max-w-4xl mx-auto px-5;
-}
-
-.container-wide {
-  @apply max-w-7xl mx-auto px-5;
+  @apply max-w-4xl mx-auto px-6 md:px-10;
 }
 
 .section-padding {
-  @apply py-20 md:py-32;
+  @apply py-24 md:py-32;
 }
 
-/* ========================================
-   DECORATIVE ELEMENTS
-   ======================================== */
-
-.dot-pattern {
-  background-image: radial-gradient(
-    circle,
-    var(--color-aa) 1px,
-    transparent 1px
-  );
-  background-size: 24px 24px;
-  opacity: 0.15;
+/* Buttons */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 font-mono text-sm font-medium text-white uppercase tracking-wider rounded-lg overflow-hidden transition-all duration-300;
+  background: var(--color-a);
 }
 
-.line-pattern {
-  background-image: repeating-linear-gradient(
-    0deg,
-    var(--color-border) 0px,
-    var(--color-border) 1px,
-    transparent 1px,
-    transparent 60px
-  );
-  opacity: 0.3;
-}
-
-.grain-overlay {
-  position: fixed;
+.btn-primary::before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: var(--color-orange);
+  transform: translateX(-101%);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+
+.btn-primary:hover::before {
+  transform: translateX(0);
+}
+
+.btn-primary span, .btn-primary svg {
+  position: relative;
+  z-index: 2;
+}
+
+/* Cards */
+.card-technical {
+  @apply bg-white border border-border p-8 rounded-xl transition-all duration-300 relative;
+}
+
+.card-technical::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-orange);
+  border-radius: 0.75rem;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: all 0.3s ease;
   pointer-events: none;
-  z-index: 1000;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* ========================================
-   LINK STYLES
-   ======================================== */
+.card-technical:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
 
-.link-underline {
-  @apply underline underline-offset-4;
+/* Text Highlights */
+.highlight {
+  position: relative;
+  display: inline-block;
   color: var(--color-orange);
-  transition: color 0.3s ease;
 }
 
-.link-underline:hover {
-  color: var(--color-a);
+/* Decorative */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
 }
 
-/* ========================================
-   RESPONSIVE UTILITIES
-   ======================================== */
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .section-padding {
-    @apply py-16;
-  }
+/* Animations */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* ========================================
-   FOCUS STATES (Accessibility)
-   ======================================== */
-
-:focus-visible {
-  outline: 2px solid var(--color-orange);
-  outline-offset: 2px;
+.animate-ticker {
+  animation: ticker 30s linear infinite;
 }
 
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid var(--color-orange);
-  outline-offset: 2px;
+.animate-ticker:hover {
+  animation-play-state: paused;
 }

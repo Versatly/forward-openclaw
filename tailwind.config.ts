@@ -21,7 +21,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-rethink-sans)", "system-ui", "sans-serif"],
-        editorial: ["Georgia", "serif"],
+        editorial: ["var(--font-playfair-display)", "Georgia", "serif"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
       },
       borderRadius: {
         "4xl": "2rem",
@@ -33,6 +34,7 @@ const config: Config = {
         "scale-in": "scaleIn 0.4s ease-out forwards",
         marquee: "marquee 30s linear infinite",
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
+        "blink": "blink 1s step-end infinite",
       },
       keyframes: {
         float: {
@@ -59,6 +61,10 @@ const config: Config = {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.7" },
         },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        }
       },
     },
   },
