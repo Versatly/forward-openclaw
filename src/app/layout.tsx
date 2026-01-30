@@ -26,11 +26,11 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://forwardopenclaw.com'),
   title: {
-    default: "Forward OpenClaw | We Deploy OpenClaw Inside Real Businesses",
+    default: "Forward OpenClaw | Simple AI for Local Shops, Salons, and Service Businesses",
     template: "%s | Forward OpenClaw"
   },
-  description: "We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work. Not chat. Not demos.",
-  keywords: ["AI consulting", "AI deployment", "enterprise AI", "AI automation", "OpenClaw", "machine learning consulting", "AI implementation", "forward deploy AI"],
+  description: "Save hours every day with AI automation for your local business. Just forward customer messages and let AI handle bookings, replies, and more. No coding required.",
+  keywords: ["AI for small business", "AI automation for local businesses", "customer service AI", "AI booking system", "WhatsApp AI", "AI for plumbers", "AI for salons", "AI for restaurants", "business automation", "local service AI"],
   authors: [{ name: "Forward OpenClaw" }],
   creator: "Forward OpenClaw",
   publisher: "Forward OpenClaw",
@@ -50,21 +50,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://forwardopenclaw.com',
     siteName: 'Forward OpenClaw',
-    title: 'Forward OpenClaw | We Deploy OpenClaw Inside Real Businesses',
-    description: 'We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work.',
+    title: 'Forward OpenClaw | Simple AI for Local Shops, Salons, and Service Businesses',
+    description: 'Save hours every day with AI automation for your local business. Just forward customer messages and let AI handle bookings, replies, and more.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Forward OpenClaw - Elite OpenClaw Deployment',
+        alt: 'Forward OpenClaw - Simple AI for Local Service Businesses',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Forward OpenClaw | We Deploy OpenClaw Inside Real Businesses',
-    description: 'We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work.',
+    title: 'Forward OpenClaw | Simple AI for Local Shops, Salons, and Service Businesses',
+    description: 'Save hours every day with AI automation for your local business. Just forward customer messages and let AI handle bookings, replies, and more.',
     images: ['/og-image.png'],
     creator: '@forwardopenclaw',
   },
@@ -90,7 +90,7 @@ export default function RootLayout({
               "name": "Forward OpenClaw",
               "url": "https://forwardopenclaw.com",
               "logo": "https://forwardopenclaw.com/logo.png",
-              "description": "We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work.",
+              "description": "Simple AI automation for local service businesses. Save hours every day by forwarding customer messages and letting AI handle bookings, replies, and more.",
               "foundingDate": "2024",
               "sameAs": [
                 "https://twitter.com/forwardopenclaw",
@@ -112,7 +112,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Service",
-              "serviceType": "AI Consulting and Deployment",
+              "serviceType": "AI Automation for Local Service Businesses",
               "provider": {
                 "@type": "Organization",
                 "name": "Forward OpenClaw"
@@ -120,7 +120,7 @@ export default function RootLayout({
               "areaServed": "Worldwide",
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "AI Deployment Services",
+                "name": "AI Automation Services for Local Businesses",
                 "itemListElement": [
                   {
                     "@type": "Offer",
@@ -137,7 +137,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Implementation",
-                      "description": "Full AI system deployment and integration"
+                      "description": "Full AI setup and configuration for your business workflows"
                     },
                     "price": "25000",
                     "priceCurrency": "USD"
