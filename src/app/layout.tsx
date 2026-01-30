@@ -11,10 +11,10 @@ const rethinkSans = Rethink_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://forwardopenclaw.com'),
   title: {
-    default: "Forward OpenClaw | Elite AI Deployment & Consulting",
+    default: "Forward OpenClaw | We Deploy OpenClaw Inside Real Businesses",
     template: "%s | Forward OpenClaw"
   },
-  description: "We come to you. We deploy. We maintain. You profit. Forward OpenClaw is the elite team that brings enterprise-grade AI automation to your doorstep.",
+  description: "We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work. Not chat. Not demos.",
   keywords: ["AI consulting", "AI deployment", "enterprise AI", "AI automation", "OpenClaw", "machine learning consulting", "AI implementation", "forward deploy AI"],
   authors: [{ name: "Forward OpenClaw" }],
   creator: "Forward OpenClaw",
@@ -35,21 +35,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://forwardopenclaw.com',
     siteName: 'Forward OpenClaw',
-    title: 'Forward OpenClaw | Elite AI Deployment & Consulting',
-    description: 'We come to you. We deploy. We maintain. You profit. Enterprise-grade AI automation delivered by elite specialists.',
+    title: 'Forward OpenClaw | We Deploy OpenClaw Inside Real Businesses',
+    description: 'We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Forward OpenClaw - Elite AI Deployment',
+        alt: 'Forward OpenClaw - Elite OpenClaw Deployment',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Forward OpenClaw | Elite AI Deployment & Consulting',
-    description: 'We come to you. We deploy. We maintain. You profit. Enterprise-grade AI automation delivered by elite specialists.',
+    title: 'Forward OpenClaw | We Deploy OpenClaw Inside Real Businesses',
+    description: 'We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work.',
     images: ['/og-image.png'],
     creator: '@forwardopenclaw',
   },
@@ -75,7 +75,7 @@ export default function RootLayout({
               "name": "Forward OpenClaw",
               "url": "https://forwardopenclaw.com",
               "logo": "https://forwardopenclaw.com/logo.png",
-              "description": "Elite AI deployment and consulting team specializing in enterprise-grade AI automation.",
+              "description": "We Deploy OpenClaw Inside Real Businesses — And It Runs the Day-to-Day. OpenClaw is the open-source AI assistant that actually does work.",
               "foundingDate": "2024",
               "sameAs": [
                 "https://twitter.com/forwardopenclaw",

@@ -74,10 +74,10 @@ function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-1">
-          {['Process', 'Expertise', 'Services', 'Contact'].map((item) => (
+          {['Automations', 'Process', 'Services', 'Contact'].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`#${item.toLowerCase() === 'automations' ? 'process' : item.toLowerCase()}`}
               className="px-4 py-2 text-aa hover:text-a rounded-xl transition-all duration-300 hover:bg-white/50 text-sm font-medium"
             >
               {item}
@@ -86,7 +86,7 @@ function Header() {
         </nav>
 
         <a href="#contact" className="btn-primary text-sm !py-2.5 !px-5">
-          Start a Project
+          Schedule Call
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -116,25 +116,34 @@ function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-editorial mb-8 tracking-tight animate-fade-in-up stagger-1" style={{ opacity: 0 }}>
-          <span className="block text-a">We Deploy</span>
-          <span className="block font-editorial-italic text-orange">AI Excellence</span>
-          <span className="block text-a">You Thrive</span>
+          <span className="block text-a">We Deploy OpenClaw Inside</span>
+          <span className="block font-editorial-italic text-orange">Real Businesses</span>
+          <span className="block text-a">— And It Runs the Day-to-Day</span>
         </h1>
 
         <p className="text-lg md:text-xl text-aa max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up stagger-2" style={{ opacity: 0 }}>
-          The elite OpenClaw forward-deploy team brings enterprise-grade AI automation
-          directly to your infrastructure, tailored precisely to your needs.
+          OpenClaw (formerly Clawdbot → Moltbot) is the open-source AI assistant that actually does work.
+          Not chat. Not demos.
+        </p>
+        <p className="text-lg md:text-xl text-aa max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up stagger-2" style={{ opacity: 0 }}>
+          It reads and replies to emails, manages calendars, books meetings, runs code, researches competitors, files expenses, monitors systems, generates reports, and executes full workflows — 24/7 on your own hardware.
+        </p>
+        <p className="text-lg md:text-xl text-aa max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up stagger-2" style={{ opacity: 0 }}>
+          Thousands of people already run it personally. Real companies are now using it to replace entire manual processes.
+        </p>
+        <p className="text-lg md:text-xl text-aa max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up stagger-2" style={{ opacity: 0 }}>
+          We are the team that deploys it inside businesses — securely, customized, and production-ready.
+        </p>
+        <p className="text-lg md:text-xl text-aa max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up stagger-2" style={{ opacity: 0 }}>
+          You get an AI employee that never sleeps, never complains, and gets better every week.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up stagger-3" style={{ opacity: 0 }}>
           <a href="#contact" className="btn-primary text-base">
-            Start Your Transformation
+            Schedule Call
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
-          <a href="#process" className="btn-secondary text-base">
-            See How It Works
           </a>
         </div>
 
@@ -149,28 +158,36 @@ function Hero() {
   );
 }
 
-// Process Section
-function Process() {
-  const steps = [
+// What Real Users Are Automating Section
+function RealUsersAutomating() {
+  const automations = [
+    "Clears inbox, flags urgent emails, drafts replies, sends with one approval",
+    "Pulls calendar, books meetings, adds Zoom links, reminds you when to leave based on traffic",
+    "Runs daily/weekly research: competitor updates, market reports, news summaries",
+    "Automates expense tracking, reimbursement submissions, invoice chasing",
+    "Monitors systems, alerts on issues, runs fixes via scripts",
+    "Handles customer support tickets, drafts responses, escalates when needed",
+    "Writes and schedules content, generates images/slides, posts directly",
+    "Codes, tests, deploys — full dev loops triggered by a message",
+    "Proactive: checks your goals, suggests tasks, follows up on open items",
+  ];
+
+  const testimonials = [
     {
-      number: "01",
-      title: "Discovery",
-      description: "We assess your infrastructure, understand your pain points, and identify high-impact AI opportunities tailored to your business.",
+      quote: "It's running my company.",
+      author: "@therno"
     },
     {
-      number: "02",
-      title: "Blueprint",
-      description: "Our architects design a bespoke AI solution that integrates seamlessly with your existing systems and workflows.",
+      quote: "From nervous 'hi what can you do?' to full throttle - design, code review, taxes, PM, content pipelines... AI as teammate, not tool.",
+      author: "@lycfyi"
     },
     {
-      number: "03",
-      title: "Deploy",
-      description: "Our elite team arrives on-site or connects remotely to deploy, test, and optimize your AI systems with precision.",
+      quote: "A smart model with eyes and hands at a desk with keyboard and mouse. You message it like a coworker and it does everything a person could do.",
+      author: "@nathanclark_"
     },
     {
-      number: "04",
-      title: "Evolve",
-      description: "Ongoing support ensures your AI investment compounds. We monitor, optimize, and evolve with your growing needs.",
+      quote: "At this point I don't even know what to call @openclaw. This is the first time I have felt like I am living in the future since the launch of ChatGPT.",
+      author: "@davemorin"
     },
   ];
 
@@ -180,18 +197,90 @@ function Process() {
 
       <div className="container-wide relative z-10">
         <div className="text-center mb-20">
-          <span className="inline-block px-4 py-2 rounded-full bg-orange/10 text-orange text-sm font-semibold tracking-wide uppercase mb-6">
-            Our Process
-          </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-editorial mb-6">
-            How We <span className="italic text-orange">Transform</span> Your Business
+            What Real Users Are <span className="italic text-orange">Automating</span> Right Now
           </h2>
-          <p className="text-lg text-aa max-w-2xl mx-auto">
-            A refined methodology developed through enterprise deployments across industries.
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          {automations.map((automation, index) => (
+            <div
+              key={index}
+              className="card group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <p className="text-aa leading-relaxed">{automation}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="card group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <p className="text-lg text-a mb-4 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+              <p className="text-aa font-medium">— {testimonial.author}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// How We Deploy Section
+function HowWeDeploy() {
+  const steps = [
+    {
+      number: "01",
+      title: "Discovery",
+      description: "We map your current workflows, identify the biggest time sinks, and show exactly what OpenClaw will automate first.",
+    },
+    {
+      number: "02",
+      title: "Customization",
+      description: "We build the exact skills, integrations, and guardrails your team needs. Gmail, Calendar, Slack, CRM, internal tools — whatever you use.",
+    },
+    {
+      number: "03",
+      title: "Deployment",
+      description: "Secure install on your servers or cloud. Sandboxed, monitored, production-hardened. Your data never leaves your control.",
+    },
+    {
+      number: "04",
+      title: "Handover & Evolution",
+      description: "Train your team. Set up approvals. Ongoing tuning so it keeps improving as your business changes.",
+    },
+  ];
+
+  const whyChooseUs = [
+    "We live and breathe OpenClaw — we've deployed it in companies just like yours.",
+    "Self-hosted = full ownership. No vendor lock-in, no per-seat pricing, no data harvesting.",
+    "Real results fast: most clients see major workflows automated in weeks.",
+    "Battle-tested security: sandboxing, approval gates, audit logs.",
+  ];
+
+  return (
+    <section id="expertise" className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 gradient-warm" />
+
+      <div className="container-wide relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-editorial mb-6">
+            How We Deploy It <span className="italic text-orange">In Your Business</span>
+          </h2>
+          <p className="text-lg text-aa max-w-2xl mx-auto mb-8">
+            No Mac Mini experiments. No exposed keys. No weekend crashes.
+          </p>
+          <p className="text-lg text-aa max-w-2xl mx-auto font-semibold">
+            We handle everything:
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -210,125 +299,22 @@ function Process() {
                   <p className="text-aa leading-relaxed">{step.description}</p>
                 </div>
               </div>
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 text-border">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              )}
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
 
-// Expertise Section
-function Expertise() {
-  const expertise = [
-    {
-      area: "Large Language Models",
-      detail: "GPT-4, Claude, Llama, custom fine-tuning",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-        </svg>
-      )
-    },
-    {
-      area: "Computer Vision",
-      detail: "Object detection, image generation, video analysis",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      )
-    },
-    {
-      area: "MLOps & Infrastructure",
-      detail: "Kubernetes, Docker, cloud-native AI pipelines",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
-        </svg>
-      )
-    },
-    {
-      area: "Data Engineering",
-      detail: "ETL, real-time streaming, data lake architecture",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-        </svg>
-      )
-    },
-    {
-      area: "Security & Compliance",
-      detail: "SOC2, HIPAA, GDPR, air-gapped deployments",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-        </svg>
-      )
-    },
-    {
-      area: "Edge Computing",
-      detail: "On-premise inference, IoT integration, low-latency",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
-        </svg>
-      )
-    },
-  ];
-
-  return (
-    <section id="expertise" className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 gradient-warm" />
-
-      <div className="container-wide relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="inline-block px-4 py-2 rounded-full bg-orange/10 text-orange text-sm font-semibold tracking-wide uppercase mb-6">
-              Our Expertise
-            </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-editorial mb-8">
-              Elite Engineers.<br />
-              <span className="italic text-orange">Proven Results.</span>
-            </h2>
-            <p className="text-lg text-aa mb-8 leading-relaxed">
-              Our forward-deploy specialists come from leading AI research labs and top tech companies.
-              We don&apos;t just understand AI&mdash;we&apos;ve built it at scale.
-            </p>
-            <div className="flex items-center gap-6">
-              <div className="flex -space-x-3">
-                {['A', 'B', 'C', 'D', 'E'].map((letter, i) => (
-                  <div
-                    key={i}
-                    className="w-12 h-12 rounded-full bg-card border-2 border-background flex items-center justify-center text-sm font-semibold text-aa"
-                  >
-                    {letter}
-                  </div>
-                ))}
-              </div>
-              <span className="text-aa">+12 specialists ready to deploy</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {expertise.map((item, index) => (
+        <div className="mt-20">
+          <h3 className="text-3xl md:text-4xl font-editorial mb-8 text-center">
+            Why Businesses <span className="italic text-orange">Choose Us</span>
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {whyChooseUs.map((reason, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-white/40 border border-border/30 hover:border-orange/30 transition-all duration-300 hover:bg-white/60 group"
+                className="card group"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center mb-4 text-orange group-hover:bg-orange/20 transition-colors duration-300">
-                  {item.icon}
-                </div>
-                <h3 className="font-semibold text-a mb-2">{item.area}</h3>
-                <p className="text-sm text-aa">{item.detail}</p>
+                <p className="text-aa leading-relaxed">{reason}</p>
               </div>
             ))}
           </div>
@@ -342,49 +328,43 @@ function Expertise() {
 function Services() {
   const tiers = [
     {
-      name: "Discovery",
-      price: "$5K",
-      description: "AI readiness assessment and strategic roadmap",
+      name: "Discovery Workshop",
+      price: "$5,000",
+      description: "2-day deep dive. Full workflow audit + prioritized automation roadmap. You walk away knowing exactly what's possible and ROI.",
       features: [
-        "2-day on-site assessment",
-        "Infrastructure audit",
-        "AI opportunity mapping",
-        "Custom implementation roadmap",
-        "Executive presentation",
-        "30-day follow-up call",
+        "2-day deep dive",
+        "Full workflow audit",
+        "Prioritized automation roadmap",
+        "ROI analysis",
       ],
       cta: "Book Discovery",
       popular: false,
     },
     {
-      name: "Implementation",
-      price: "$25K",
-      description: "Full AI system deployment and integration",
+      name: "Full Deployment",
+      price: "$25,000",
+      description: "Everything in Discovery + custom skills + production deploy + team training + 90 days support.",
       features: [
         "Everything in Discovery",
-        "Custom AI solution design",
-        "Full deployment & integration",
-        "Team training (up to 20 people)",
-        "90-day support included",
-        "Performance optimization",
-        "Documentation & runbooks",
+        "Custom skills development",
+        "Production deployment",
+        "Team training",
+        "90 days support",
       ],
-      cta: "Start Implementation",
+      cta: "Start Deployment",
       popular: true,
     },
     {
-      name: "Partnership",
-      price: "$50K",
-      description: "Ongoing AI excellence and continuous improvement",
+      name: "Ongoing Partnership",
+      price: "$50,000+/year",
+      description: "Dedicated engineer. Continuous new automations. Quarterly reviews. Priority fixes. We grow with you.",
       features: [
-        "Everything in Implementation",
-        "Dedicated AI architect",
-        "Quarterly on-site reviews",
-        "24/7 priority support",
-        "Continuous optimization",
-        "New feature development",
-        "Executive AI briefings",
-        "Multi-system expansion",
+        "Everything in Full Deployment",
+        "Dedicated engineer",
+        "Continuous new automations",
+        "Quarterly reviews",
+        "Priority fixes",
+        "We grow with you",
       ],
       cta: "Become a Partner",
       popular: false,
@@ -396,14 +376,11 @@ function Services() {
       <div className="container-wide">
         <div className="text-center mb-20">
           <span className="inline-block px-4 py-2 rounded-full bg-orange/10 text-orange text-sm font-semibold tracking-wide uppercase mb-6">
-            Services
+            Engagements
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-editorial mb-6">
-            Investment That <span className="italic text-orange">Scales</span>
+            Choose Your <span className="italic text-orange">Engagement</span>
           </h2>
-          <p className="text-lg text-aa max-w-2xl mx-auto">
-            Transparent pricing with guaranteed results. Choose the engagement level that fits your needs.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -475,24 +452,24 @@ function FAQ() {
 
   const faqs = [
     {
-      question: "How long does a typical deployment take?",
-      answer: "Deployment timelines vary based on complexity. Discovery engagements are completed in 2 days, while full implementations typically range from 4-8 weeks. We'll provide a detailed timeline during your initial consultation."
+      question: "How long does deployment take?",
+      answer: "Discovery: 2 days. Full deployment: 4–8 weeks depending on integrations."
     },
     {
-      question: "Do you work with companies of all sizes?",
-      answer: "We primarily work with mid-market and enterprise clients who have established data infrastructure. However, we evaluate each opportunity based on potential impact and fit, not just company size."
+      question: "Do you need our servers?",
+      answer: "We deploy on your infrastructure (cloud or on-prem). You stay in control."
     },
     {
-      question: "What makes your approach different?",
-      answer: "Unlike consultants who deliver reports and leave, we deploy directly into your environment. Our team stays engaged through implementation, ensuring the solution works in production, not just on paper."
+      question: "Is it secure for enterprise use?",
+      answer: "Yes. Sandboxed tools, approval workflows, full audit trails. We've done air-gapped and regulated environments."
     },
     {
-      question: "How do you handle sensitive data and security?",
-      answer: "Security is paramount. We're SOC2 compliant and can work within air-gapped environments. All deployments follow your security protocols, and we sign comprehensive NDAs before any engagement."
+      question: "What if we already tried running it ourselves?",
+      answer: "Most companies start there and hit limits. We take it from hobby to reliable business tool."
     },
     {
-      question: "What ongoing support do you provide?",
-      answer: "Every engagement includes a support period (30-90 days depending on tier). Partnership clients receive dedicated support with 24/7 availability. We also offer annual support contracts for completed implementations."
+      question: "Do you support teams or just individuals?",
+      answer: "Fully multi-user. Shared agents, role-based access, team channels."
     },
   ];
 
@@ -502,11 +479,8 @@ function FAQ() {
 
       <div className="container-narrow relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-orange/10 text-orange text-sm font-semibold tracking-wide uppercase mb-6">
-            FAQ
-          </span>
           <h2 className="text-4xl md:text-5xl font-editorial mb-6">
-            Common <span className="italic text-orange">Questions</span>
+            FAQ
           </h2>
         </div>
 
@@ -576,14 +550,17 @@ function Contact() {
 
       <div className="container-narrow relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-orange/10 text-orange text-sm font-semibold tracking-wide uppercase mb-6">
-            Get Started
-          </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-editorial mb-6">
-            Ready to <span className="italic text-orange">Transform?</span>
+            Ready to <span className="italic text-orange">Automate Your Business?</span>
           </h2>
-          <p className="text-lg text-aa">
-            Book a free discovery call. No pressure, just possibilities.
+          <p className="text-lg text-aa mb-4">
+            Spots are limited — we only take clients we know we can transform.
+          </p>
+          <p className="text-lg text-aa mb-4">
+            Book a 30-minute call. Tell us your biggest manual headache.
+          </p>
+          <p className="text-lg text-aa font-semibold">
+            We'll show you exactly how OpenClaw fixes it.
           </p>
         </div>
 
@@ -643,12 +620,12 @@ function Contact() {
             </div>
 
             <div className="md:col-span-2">
-              <label htmlFor="message" className="block text-sm font-medium text-aa mb-2">Tell us about your AI goals</label>
+              <label htmlFor="message" className="block text-sm font-medium text-aa mb-2">Tell us your biggest manual headache</label>
               <textarea
                 id="message"
                 rows={4}
                 className="input-field resize-none"
-                placeholder="What challenges are you looking to solve with AI?"
+                placeholder="What manual processes are slowing down your business?"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
@@ -670,7 +647,7 @@ function Contact() {
                   </>
                 ) : (
                   <>
-                    Book Your Free Discovery Call
+                    Schedule Call
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -678,7 +655,7 @@ function Contact() {
                 )}
               </button>
               <p className="text-center text-aa text-sm mt-4">
-                We respond within 24 hours. No spam, ever.
+                We'll show you exactly how OpenClaw fixes it.
               </p>
             </div>
           </div>
@@ -704,15 +681,16 @@ function Footer() {
               <span className="font-editorial text-xl text-a">Forward<span className="text-orange italic">OpenClaw</span></span>
             </a>
             <p className="text-aa max-w-sm">
-              Elite AI deployment for enterprises that demand excellence. We come to you, we deploy, you thrive.
+              Forward OpenClaw — Elite OpenClaw Deployment<br />
+              Your workflows automated. Your business accelerated.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-a mb-4">Navigation</h4>
             <nav className="flex flex-col gap-3">
-              <a href="#process" className="text-aa hover:text-orange transition-colors">Process</a>
-              <a href="#expertise" className="text-aa hover:text-orange transition-colors">Expertise</a>
+              <a href="#process" className="text-aa hover:text-orange transition-colors">Automations</a>
+              <a href="#expertise" className="text-aa hover:text-orange transition-colors">Process</a>
               <a href="#services" className="text-aa hover:text-orange transition-colors">Services</a>
               <a href="#contact" className="text-aa hover:text-orange transition-colors">Contact</a>
             </nav>
@@ -750,8 +728,8 @@ export default function Home() {
 
       <Header />
       <Hero />
-      <Process />
-      <Expertise />
+      <RealUsersAutomating />
+      <HowWeDeploy />
       <Services />
       <FAQ />
       <Contact />
