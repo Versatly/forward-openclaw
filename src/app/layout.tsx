@@ -1,15 +1,38 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ 
+const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-rethink-sans",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
+const ppEditorial = localFont({
+  src: [
+    {
+      path: "../fonts/PPEditorialNew-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/PPEditorialNew-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../fonts/PPEditorialNew-Ultrabold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/PPEditorialNew-UltraboldItalic.woff2",
+      weight: "800",
+      style: "italic",
+    },
+  ],
+  variable: "--font-pp-editorial",
 });
 
 export const metadata: Metadata = {
@@ -18,7 +41,7 @@ export const metadata: Metadata = {
     default: "Forward OpenClaw | Elite AI Deployment & Consulting",
     template: "%s | Forward OpenClaw"
   },
-  description: "We come to you. We deploy. We maintain. You profit. Forward OpenClaw is the elite team that brings enterprise-grade AI automation to your doorstep. $5K-$50K engagements that transform your business.",
+  description: "We come to you. We deploy. We maintain. You profit. Forward OpenClaw is the elite team that brings enterprise-grade AI automation to your doorstep.",
   keywords: ["AI consulting", "AI deployment", "enterprise AI", "AI automation", "OpenClaw", "machine learning consulting", "AI implementation", "forward deploy AI"],
   authors: [{ name: "Forward OpenClaw" }],
   creator: "Forward OpenClaw",
@@ -59,9 +82,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://forwardopenclaw.com',
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 };
 
@@ -150,7 +170,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${rethinkSans.variable} ${ppEditorial.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
