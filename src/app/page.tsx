@@ -39,7 +39,7 @@ function Header() {
             </a>
           ))}
           <a href="#contact" className={`btn-primary ${scrolled ? '!py-2 !px-4 text-xs' : '!py-3 !px-6 text-sm'} transition-all duration-500`}>
-            <span>Get Started</span>
+            <span>Free Audit</span>
           </a>
         </nav>
       </div>
@@ -59,32 +59,32 @@ function Hero() {
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange/30 bg-orange/5 mb-8">
             <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
-            <span className="text-xs font-mono text-orange uppercase tracking-wider">Accepting New Engagements</span>
+            <span className="text-xs font-mono text-orange uppercase tracking-wider">Same-Day Installation Available</span>
           </div>
 
           <h1 className="text-6xl md:text-8xl mb-8 leading-[0.9] tracking-tighter">
-            Just Forward It <br />
-            <span className="font-editorial italic text-orange">to OpenClaw.</span> <br />
-            AI Handles the Rest.
+            Live by Tonight. <br />
+            <span className="font-editorial italic text-orange">No Waiting.</span> <br />
+            AI Running Today.
           </h1>
 
           <p className="text-xl md:text-2xl text-aa max-w-2xl leading-relaxed mb-12">
-            Save hours every day. AI that handles your customer messages, bookings, and inquiries—no coding, no complex setup. Works with WhatsApp, email, and the tools you already use.
+            Free 30-minute audit. If you qualify, we deploy same-day. Forward-deployed team installs AI that handles your customer messages, bookings, and inquiries before you go to bed tonight.
             <span className="block mt-4 text-base font-mono text-aaa border-l-2 border-orange/30 pl-4">
-              // For busy local service businesses <br/>
-              // Plumbers, salons, auto repair, restaurants, cleaners
+              // Forward-deployed engineers on standby <br/>
+              // Same-day setup for qualifying businesses
             </span>
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a href="#contact" className="btn-primary">
-              <span>Get Started</span>
+              <span>Get Free 30-Min Audit</span>
               <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
             <a href="#process" className="group flex items-center gap-2 px-6 py-4 rounded-lg border border-border hover:border-orange transition-colors bg-white">
-              <span className="font-medium">See it in action</span>
+              <span className="font-medium">See how it works</span>
               <svg className="w-4 h-4 text-aa group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -179,10 +179,10 @@ function Automations() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-5xl md:text-7xl font-editorial leading-[0.9] mb-8">
-              "It's running my <br/><span className="text-orange italic">entire company.</span>"
+              "Installed before <br/><span className="text-orange italic">I finished lunch.</span>"
             </h2>
             <p className="text-xl text-aa leading-relaxed max-w-lg">
-              We don't just automate tasks. We install a digital workforce that operates 24/7 with zero overhead.
+              We don't schedule meetings for next week. Our forward-deployed team shows up same-day and installs a digital workforce that's live before you close shop.
             </p>
           </div>
           
@@ -225,10 +225,10 @@ function Automations() {
 // --- Process (Timeline) ---
 function Process() {
   const steps = [
-    { num: "01", title: "Discovery", desc: "We learn about your business—what messages you get, how you handle bookings, what takes up your time." },
-    { num: "02", title: "Setup", desc: "We configure AI to work with your WhatsApp, email, or booking system. No coding needed from you." },
-    { num: "03", title: "Launch", desc: "Start forwarding customer messages. AI handles replies, bookings, and reminders automatically." },
-    { num: "04", title: "Support", desc: "We keep it running smoothly and add new features as your business grows." },
+    { num: "01", title: "Free 30-Min Audit", desc: "Book a call. We analyze your business in 30 minutes—no charge, no commitment. We'll tell you exactly what we can automate and if you qualify for same-day install." },
+    { num: "02", title: "Qualification", desc: "If your setup matches our criteria (most do), we green-light same-day deployment. Our forward-deployed team is already standing by." },
+    { num: "03", title: "Same-Day Install", desc: "We show up. We configure everything. AI is handling your messages, bookings, and inquiries before you go home tonight." },
+    { num: "04", title: "Live Support", desc: "Questions at 11pm? We're there. Ongoing optimization, instant fixes, zero waiting." },
   ];
 
   return (
@@ -237,7 +237,7 @@ function Process() {
         <div className="grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-4">
             <h2 className="text-6xl font-editorial mb-8 sticky top-32 leading-[0.9]">
-              How We <br/> <span className="text-orange italic">Set It Up.</span>
+              Live <br/> <span className="text-orange italic">By Tonight.</span>
             </h2>
             <div className="hidden lg:block sticky top-80 mt-12">
                <div className="font-mono text-xs uppercase tracking-wider text-aa mb-2">Security Protocol</div>
@@ -296,61 +296,61 @@ function Services() {
           {/* Discovery */}
           <div className="group p-8 lg:p-12 hover:bg-white/5 transition-colors duration-500">
             <div className="font-mono text-xs text-orange mb-8 tracking-widest">01 / AUDIT</div>
-            <h3 className="text-4xl font-editorial mb-4">Discovery</h3>
+            <h3 className="text-4xl font-editorial mb-4">Free Audit</h3>
             <div className="text-xl text-white/60 mb-8 h-16">
-              Deep dive audit. We map workflows and deliver an automation roadmap.
+              30-minute call. We assess your business and tell you if you qualify for same-day install.
             </div>
             <ul className="space-y-4 font-mono text-sm text-white/80 mb-12 border-t border-white/10 pt-8">
-              <li className="flex justify-between"><span>Timeline</span> <span>2 Days</span></li>
-              <li className="flex justify-between"><span>Deliverable</span> <span>Roadmap + ROI</span></li>
-              <li className="flex justify-between"><span>Team</span> <span>Senior Architect</span></li>
+              <li className="flex justify-between"><span>Timeline</span> <span>30 Minutes</span></li>
+              <li className="flex justify-between"><span>Deliverable</span> <span>Go/No-Go Decision</span></li>
+              <li className="flex justify-between"><span>Team</span> <span>Forward-Deployed Engineer</span></li>
             </ul>
             <div className="flex items-end justify-between mb-8">
-               <div className="text-4xl font-mono">$5,000</div>
+               <div className="text-4xl font-mono">FREE</div>
             </div>
             <a href="#contact" className="w-full inline-flex justify-center py-4 border border-white/30 hover:bg-white hover:text-a transition-all uppercase tracking-widest text-xs font-mono">
-              Book Workshop
+              Book Audit Now
             </a>
           </div>
 
           {/* Full Setup */}
           <div className="group p-8 lg:p-12 bg-white/5 relative overflow-hidden">
             <div className="absolute top-0 inset-x-0 h-1 bg-orange" />
-            <div className="font-mono text-xs text-orange mb-8 tracking-widest">02 / BUILD</div>
-            <h3 className="text-4xl font-editorial mb-4">Full Setup</h3>
+            <div className="font-mono text-xs text-orange mb-8 tracking-widest">02 / DEPLOY</div>
+            <h3 className="text-4xl font-editorial mb-4">Same-Day Install</h3>
             <div className="text-xl text-white/80 mb-8 h-16">
-              End-to-end implementation. Configured workflows, training, and 90-day stabilization.
+              Pass the audit? We deploy today. Forward-deployed team on-site or remote. Live by tonight.
             </div>
              <ul className="space-y-4 font-mono text-sm text-white/80 mb-12 border-t border-white/10 pt-8">
-              <li className="flex justify-between"><span>Timeline</span> <span>2-4 Weeks</span></li>
-              <li className="flex justify-between"><span>Deliverable</span> <span>Live System</span></li>
-              <li className="flex justify-between"><span>Training</span> <span>Included</span></li>
+              <li className="flex justify-between"><span>Timeline</span> <span>Same Day</span></li>
+              <li className="flex justify-between"><span>Deliverable</span> <span>Live System Tonight</span></li>
+              <li className="flex justify-between"><span>Team</span> <span>Forward-Deployed Engineers</span></li>
             </ul>
             <div className="flex items-end justify-between mb-8">
-               <div className="text-4xl font-mono text-orange">$25,000</div>
+               <div className="text-4xl font-mono text-orange">$15,000</div>
             </div>
             <a href="#contact" className="w-full inline-flex justify-center py-4 bg-orange text-white hover:bg-orange-light transition-all uppercase tracking-widest text-xs font-mono">
-              Get Started
+              Deploy Today
             </a>
           </div>
 
           {/* Partner */}
           <div className="group p-8 lg:p-12 hover:bg-white/5 transition-colors duration-500">
-            <div className="font-mono text-xs text-orange mb-8 tracking-widest">03 / PARTNER</div>
-            <h3 className="text-4xl font-editorial mb-4">Scale</h3>
+            <div className="font-mono text-xs text-orange mb-8 tracking-widest">03 / ONGOING</div>
+            <h3 className="text-4xl font-editorial mb-4">Always On</h3>
             <div className="text-xl text-white/60 mb-8 h-16">
-              Dedicated support, new feature rollouts, and quarterly optimization cycles.
+              24/7 support. Same-day fixes. New features deployed within hours, not weeks.
             </div>
              <ul className="space-y-4 font-mono text-sm text-white/80 mb-12 border-t border-white/10 pt-8">
-              <li className="flex justify-between"><span>Timeline</span> <span>Annual</span></li>
-              <li className="flex justify-between"><span>Support</span> <span>Priority 24/7</span></li>
-              <li className="flex justify-between"><span>Updates</span> <span>Quarterly</span></li>
+              <li className="flex justify-between"><span>Response Time</span> <span>&lt; 1 Hour</span></li>
+              <li className="flex justify-between"><span>Support</span> <span>24/7 Priority</span></li>
+              <li className="flex justify-between"><span>New Features</span> <span>Same-Day Deploy</span></li>
             </ul>
             <div className="flex items-end justify-between mb-8">
-               <div className="text-4xl font-mono">$50k<span className="text-lg text-white/40">/yr</span></div>
+               <div className="text-4xl font-mono">$5k<span className="text-lg text-white/40">/mo</span></div>
             </div>
             <a href="#contact" className="w-full inline-flex justify-center py-4 border border-white/30 hover:bg-white hover:text-a transition-all uppercase tracking-widest text-xs font-mono">
-              Become Partner
+              Add Ongoing Support
             </a>
           </div>
         </div>
@@ -362,11 +362,11 @@ function Services() {
 // --- FAQ ---
 function FAQ() {
   const faqs = [
-    { q: "How long does it take?", a: "Discovery is 2 days. Full setup typically takes 2–4 weeks depending on your needs. You can start using it right away." },
-    { q: "Do I need tech skills?", a: "No. We handle all the setup. You just forward messages like you normally would, and AI handles the rest." },
-    { q: "What apps does it work with?", a: "WhatsApp, email, and most booking systems. We'll set it up to work with whatever you're already using." },
-    { q: "Is my data secure?", a: "Yes. We use sandboxed environments and enterprise-grade encryption. Your data never trains public models." },
-    { q: "What if I need custom features?", a: "That's our specialty. We build custom agents tailored exactly to your specific operational workflows." },
+    { q: "How fast can you actually deploy?", a: "Same day. Book the free 30-minute audit in the morning, get approved, and we deploy before you close. Our forward-deployed team is standing by." },
+    { q: "What does 'forward-deployed' mean?", a: "Engineers dedicated to your install—remote or on-site. No ticketing systems, no waiting in queue. Direct line, immediate action." },
+    { q: "What if I don't qualify for same-day?", a: "Rare, but it happens. Complex integrations might need 24-48 hours. We'll tell you upfront in the free audit—no surprises." },
+    { q: "Is my data secure?", a: "Yes. Enterprise-grade encryption, sandboxed environments. Your data never trains public models. We move fast, not reckless." },
+    { q: "What if something breaks at 2am?", a: "We fix it. 24/7 support with <1 hour response. Same-day fixes aren't just for install—it's how we operate." },
   ];
 
   return (
@@ -403,8 +403,8 @@ function Contact() {
     <section id="contact" className="py-32 relative overflow-hidden">
       <div className="container-narrow relative z-10">
         <div className="text-center mb-16">
-           <h2 className="text-6xl md:text-8xl font-editorial mb-8">Let's Save <br/> <span className="text-orange italic">You Time.</span></h2>
-           <p className="text-xl text-aa max-w-2xl mx-auto">Tell us what's taking up your day. We'll show you how AI can handle it.</p>
+           <h2 className="text-6xl md:text-8xl font-editorial mb-8">Book Your <br/> <span className="text-orange italic">Free Audit.</span></h2>
+           <p className="text-xl text-aa max-w-2xl mx-auto">30 minutes. No charge. We'll tell you exactly what we can automate—and if you qualify, we deploy today.</p>
         </div>
 
         {status === 'success' ? (
@@ -412,8 +412,8 @@ function Contact() {
             <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
             </div>
-            <h3 className="text-3xl font-editorial mb-2">Received.</h3>
-            <p className="text-aa">We'll be in touch within 24 hours.</p>
+            <h3 className="text-3xl font-editorial mb-2">Got it.</h3>
+            <p className="text-aa">We're calling you within the hour. Keep your phone close.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-0 max-w-xl mx-auto">
@@ -449,11 +449,11 @@ function Contact() {
                 value={formData.message}
                 onChange={e => setFormData({...formData, message: e.target.value})}
               />
-              <label className="absolute left-0 top-12 text-aa transition-all duration-300 peer-focus:top-4 peer-focus:text-xs peer-focus:text-orange peer-[:not(:placeholder-shown)]:top-4 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-orange pointer-events-none">What takes up your time?</label>
+              <label className="absolute left-0 top-12 text-aa transition-all duration-300 peer-focus:top-4 peer-focus:text-xs peer-focus:text-orange peer-[:not(:placeholder-shown)]:top-4 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-orange pointer-events-none">What's slowing you down?</label>
             </div>
 
             <button disabled={status === 'submitting'} type="submit" className="w-full btn-primary !rounded-none !py-6 !text-base">
-              <span>{status === 'submitting' ? 'Sending...' : 'Request Consultation'}</span>
+              <span>{status === 'submitting' ? 'Submitting...' : 'Book Free 30-Min Audit'}</span>
             </button>
           </form>
         )}
