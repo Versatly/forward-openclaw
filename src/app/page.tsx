@@ -120,7 +120,7 @@ function Hero() {
                 <span className="text-aa">Extracting data to SAP...</span>
               </div>
               <div className="bg-background p-3 rounded border border-border/50 text-xs text-aa my-2">
-                {`{ "vendor": "Acme Corp", "amount": 4500.00, "due": "2026-02-15" }`}
+                {`{ "vendor": "Acme Corp", "amount": "pending", "due": "2026-02-15" }`}
               </div>
               <div className="flex gap-3">
                 <span className="text-green-600">✓</span>
@@ -306,7 +306,7 @@ function Services() {
               <li className="flex justify-between"><span>Team</span> <span>Senior Architect</span></li>
             </ul>
             <div className="flex items-end justify-between mb-8">
-               <div className="text-4xl font-mono">$5,000</div>
+               <div className="text-3xl font-mono text-white/80">Custom quote</div>
             </div>
             <a href="#contact" className="w-full inline-flex justify-center py-4 border border-white/30 hover:bg-white hover:text-a transition-all uppercase tracking-widest text-xs font-mono">
               Book Workshop
@@ -327,7 +327,7 @@ function Services() {
               <li className="flex justify-between"><span>Training</span> <span>Included</span></li>
             </ul>
             <div className="flex items-end justify-between mb-8">
-               <div className="text-4xl font-mono text-orange">$25,000</div>
+               <div className="text-3xl font-mono text-orange">Custom quote</div>
             </div>
             <a href="#contact" className="w-full inline-flex justify-center py-4 bg-orange text-white hover:bg-orange-light transition-all uppercase tracking-widest text-xs font-mono">
               Get Started
@@ -347,7 +347,7 @@ function Services() {
               <li className="flex justify-between"><span>Updates</span> <span>Quarterly</span></li>
             </ul>
             <div className="flex items-end justify-between mb-8">
-               <div className="text-4xl font-mono">$50k<span className="text-lg text-white/40">/yr</span></div>
+               <div className="text-3xl font-mono text-white/80">Custom quote</div>
             </div>
             <a href="#contact" className="w-full inline-flex justify-center py-4 border border-white/30 hover:bg-white hover:text-a transition-all uppercase tracking-widest text-xs font-mono">
               Become Partner
