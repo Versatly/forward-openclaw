@@ -101,8 +101,7 @@ export default function RootLayout({
                 "contactType": "sales",
                 "email": "contact@forwardopenclaw.com"
               },
-              "areaServed": "Worldwide",
-              "priceRange": "$5,000 - $50,000"
+              "areaServed": "Worldwide"
             })
           }}
         />
@@ -128,9 +127,7 @@ export default function RootLayout({
                       "@type": "Service",
                       "name": "Discovery",
                       "description": "AI readiness assessment and strategy roadmap"
-                    },
-                    "price": "5000",
-                    "priceCurrency": "USD"
+                    }
                   },
                   {
                     "@type": "Offer",
@@ -138,9 +135,7 @@ export default function RootLayout({
                       "@type": "Service",
                       "name": "Implementation",
                       "description": "Full AI setup and configuration for your business workflows"
-                    },
-                    "price": "25000",
-                    "priceCurrency": "USD"
+                    }
                   },
                   {
                     "@type": "Offer",
@@ -148,9 +143,7 @@ export default function RootLayout({
                       "@type": "Service",
                       "name": "Partnership",
                       "description": "Ongoing AI maintenance and optimization"
-                    },
-                    "price": "50000",
-                    "priceCurrency": "USD"
+                    }
                   }
                 ]
               }
